@@ -1,6 +1,9 @@
-# ds_sdwan_events
+# Name
+ds_sdwan_events
 
-Extract the VMware(tm) SD-WAN Event Log to Splunk via the VCO REST API and a Splunk Modular Input. 
+# Function
+
+Extract the VMware(tm) SD-WAN Event Log to Splunk via the VCO REST API. 
 
 The API call to VeloCloud Orchestrator (VCO) specifies an interval to minimize the performance impact to VCO of frequent API calls. It is recommended an interval of 120-600 seconds to poll VCO.
 
@@ -11,8 +14,13 @@ We mask and encrypt the VCO API Token and save to the Splunk Password DB.
 # Author
 Dwayne Sinclair
 
-# Support  / Disclaimer
-This is supported by Dwayne Sinclair. I make every efffort to keep this code validated against current versions of Splunk and the VMware SD-WAN Solution. Do not hesitate to reach out to be if you have questions or issues.  
+# Support / Disclaimer
+This is supported by Dwayne Sinclair as is with any impled warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
+
+For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
+
+# Version
+2.0.0
 
 # Change Log
 - Updated to Python3
@@ -24,40 +32,35 @@ This is supported by Dwayne Sinclair. I make every efffort to keep this code val
             1.0.x (master) is original Python2 version of code. 
             1.1.x (python3) is Python3 with userid and password.
             1.2.x (Token3) is Python3 with security token.
-- 8/10/21   Updated to reflect GPL-3.0-or-later license and support by Dwayne.
 - 12/17/21  Updated to the latest version of splunklib the Splink Python API.
             Added Dashboards     
 - 12/23/21  Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk. 
-
-# Version
-2.0.0
 
 # With thanks to:
 Ken Guo, Andrew Lohman, Kevin Fletcher
 
 # Installation / Setup
-If you downloaded from github, rename the folder to "ds_sdwan_events" and copy to $SPLUNK_HOME/etc/apps and restart Splunk.
-Note that the username is used as a key to store state information in Splunk DB. It also helps as a reminder as to what username was used to generate the VCO API Token from. 
+- If you downloaded from github, rename the folder to "ds_sdwan_events" and copy to $SPLUNK_HOME/etc/apps and restart Splunk.
+- Once the application is installed, go to Settings/Data Inputs/SD-WAN VCO Event Log and add the VCO together with username and authentication token associated with username. 
+- Note that the username is used as a key to store state information in Splunk DB. It also helps as a reminder as to what username was used to generate the VCO API Token from.
+- VCO API Tokens have a maximum life of 12 months. Set a calendar entry to remember to renew the API token. An upcoming release will perform token automatic renew.  
 
 # Dependencies
 -	Splunk Enterprise 8.0+
 -	Python 3.x
--	VeloCloud Orchestrator enterprise username and API Token.
+-	VMware SD-WAN VCO Enterprise Username and API Token.
 -	Enterprise user account must be “Superuser”, “Standard Admin”, or “Customer Support” role.
-- Tested up to VCO V4.2
+-   Tested to VCO V4.2
 
-# In Progress
-TBD - Automatic Token Refresh
-
-# New VeloCloud Orchestrator Endpoint Configuration
+# Configuration: Settings/Data Inputs/SD-WAN VCO Event Log:
 
 Required values are:
 
 Name – The name given to this Modular Input. It is recommended to give it the name of the VeloCloud Orchestrator and Enterprise.
 
-VCO URL – The https URL of the VeloCloud Orchestrator
+VCO URL – The https URL of the VMware SD-WAN VCO. As an example, https://vco84-usvi1.velocloud.net
 
-Username – The VeloCloud Orchestrator username for a VCO enterprise user.
+Username – The VeloCloud Orchestrator username for a VCO Enterprise User.
 
 API Token – The API Token generated against this username.
 
