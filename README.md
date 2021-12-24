@@ -15,7 +15,7 @@ We mask and encrypt the VCO API Token and save to the Splunk Password DB.
 Dwayne Sinclair
 
 # Support / Disclaimer
-This is supported by Dwayne Sinclair as is with any impled warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
+This is supported by Dwayne Sinclair as is without any implied warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
 
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
