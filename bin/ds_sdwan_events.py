@@ -5,6 +5,7 @@ import time
 import requests
 import json
 import collections
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "lib"))
 import splunklib.client as client
 from splunklib.modularinput import *
 import datetime
