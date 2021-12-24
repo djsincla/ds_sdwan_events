@@ -17,6 +17,10 @@ Dwayne Sinclair
 # Support / Disclaimer
 This is supported by Dwayne Sinclair as is without any implied warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
 
+Code has been validated against Splunk code validation tools: 
+splunk-appinspect inspect /Applications/Splunk/etc/apps/ds_sdwan_events --mode precert --included-tags cloud
+
+
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
 # Version
