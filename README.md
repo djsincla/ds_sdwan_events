@@ -14,12 +14,11 @@ We mask and encrypt the VCO API Token and save to the Splunk Password DB.
 # Author
 Dwayne Sinclair
 
+# License
+Splunkbase Developer Distribution License - https://cdn.apps.splunk.com/static/misc/eula.html
+
 # Support / Disclaimer
-This is supported by Dwayne Sinclair as is without any implied warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
-
-Code has been validated against Splunk code validation tools: 
-splunk-appinspect inspect /Applications/Splunk/etc/apps/ds_sdwan_events --mode precert --included-tags cloud
-
+This is supported by Dwayne Sinclair as is with any impled warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
 
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
