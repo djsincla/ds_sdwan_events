@@ -23,7 +23,7 @@ This is supported by Dwayne Sinclair as is with any impled warranty. I make ever
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
 # Version
-2.0.0
+2.0.1
 
 # Change Log
 - Updated to Python3
