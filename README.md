@@ -37,7 +37,8 @@ For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events
             1.2.x (Token3) is Python3 with security token.
 - 12/17/21  Updated to the latest version of splunklib the Splink Python API.
             Added Dashboards     
-- 12/23/21  Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk. 
+- 12/23/21 2.0.0 Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk. 
+- 12/24/21 2.0.1 Updated location of SplunkLib to /lib as recommended in Splunk API Documentation.
 
 # With thanks to:
 Ken Guo, Andrew Lohman, Kevin Fletcher
