@@ -3,7 +3,7 @@ ds_sdwan_events
 
 # Function
 
-Extract the VMware(tm) SD-WAN Event Log to Splunk via the VCO REST API. 
+Extract the VMware(r) SD-WAN Event Log to Splunk via the VCO REST API. 
 
 The API call to VeloCloud Orchestrator (VCO) specifies an interval to minimize the performance impact to VCO of frequent API calls. It is recommended an interval of 120-600 seconds to poll VCO.
 
