@@ -32,7 +32,7 @@ For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events
 - 7/16/21   Tested ok with Splunk Enterprise 8.2.1
 - 7/16/21   Updated to latest version of splunklib and deleted external python libraries from ~/bin
 - 7/16/21   Updated version numbers...  
-            1.0.x (master) is original Python2 version of code. 
+            1.0.x (main) is original Python2 version of code. 
             1.1.x (python3) is Python3 with userid and password.
             1.2.x (Token3) is Python3 with security token.
 - 12/17/21  Updated to the latest version of splunklib the Splink Python API.
