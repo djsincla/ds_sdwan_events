@@ -23,7 +23,7 @@ This is supported by Dwayne Sinclair as-is without any impled warranty. I make e
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
 # Version
-2.0.1
+2.0.2
 
 # Change Log
 - Updated to Python3
@@ -39,6 +39,7 @@ For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events
             Added Dashboards     
 - 12/23/21 2.0.0 Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk. 
 - 12/24/21 2.0.1 Updated location of SplunkLib to /lib as recommended in Splunk API Documentation.
+- 03/07/22 2.0.2 Added default interval = 300 to default/inputs.conf 
 
 # With thanks to:
 Ken Guo, Andrew Lohman, Kevin Fletcher
