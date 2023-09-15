@@ -3,7 +3,7 @@ ds_sdwan_events
 
 # Function
 
-Extract the VMware(r) SD-WAN Event Log to Splunk via the VCO REST API. 
+Extract the VMware(tm) SD-WAN Event Log to Splunk via the VCO REST API. 
 
 The API call to VeloCloud Orchestrator (VCO) specifies an interval to minimize the performance impact to VCO of frequent API calls. It is recommended an interval of 120-600 seconds to poll VCO.
 
@@ -18,12 +18,12 @@ Dwayne Sinclair
 Splunkbase Developer Distribution License - https://cdn.apps.splunk.com/static/misc/eula.html
 
 # Support / Disclaimer
-This is supported by Dwayne Sinclair as-is without any impled warranty. I make every efffort to keep this code validated against current versions of Splunk, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
+This is supported by Dwayne Sinclair as is with any impled warranty. I make every efffort to keep this code validated against current versions of Splunk versions, Splunk Python API, and VMware SD-WAN VCO. Do not hesitate to reach out to be if you have questions or issues.
 
 For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events/issues or send an email to support@beyondcli.com
 
 # Version
-2.0.2
+2.0.0
 
 # Change Log
 - Updated to Python3
@@ -37,11 +37,16 @@ For support, you can log an issue at https://github.com/djsincla/ds_sdwan_events
             1.2.x (Token3) is Python3 with security token.
 - 12/17/21  Updated to the latest version of splunklib the Splink Python API.
             Added Dashboards     
-- 12/23/21 2.0.0 Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk. 
+- 12/23/21 2.0.0 Renamed from TA_Velocloud to ds_sdwan_events and repackaged for submission to Splunk.
 - 12/24/21 2.0.1 Updated location of SplunkLib to /lib as recommended in Splunk API Documentation.
 - 03/07/22 2.0.2 Added default interval = 300 to default/inputs.conf.
 - 03/07/22 2.0.3 Minor edits to release notes.
 - 03/07/22 2.0.4 Minor Splunk Cloud validation edits.
+- 08/10/22 2.0.5 Updated Splunklib.
+                 Changed VCO request from End Time, Start Time to Start Time, End Time. 
+- 10/14/22 2.0.6 Updated Splunklib to resolve Splunk Cloud issues.
+- 05/30/23 2.0.7 Updated Splunklib and updated requests.post from verify=False to default verifiy=True for SplunkCloud
+- 09/15/23 2.0.8 Updated Splunklib and updated config file to remove checksum.
 
 # With thanks to:
 Ken Guo, Andrew Lohman, Kevin Fletcher

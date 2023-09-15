@@ -14,7 +14,7 @@ from state_store import FileStateStore
 import urllib3
 urllib3.disable_warnings()
 
-# Dwayne Sinclair / djs 06/19 - 03/20
+# Dwayne Sinclair / djs 06/2019 - 09/2023
 #
 # VeloCloud REST API to Splunk based on the following examples:
 #  https://www.function1.com/2017/02/encrypting-a-modular-input-field-without-setup-xml
@@ -85,7 +85,7 @@ class MyScript(Script):
 		rest_url 	= definition.parameters["rest_url"]
 		username    = definition.parameters["username"]
 		vcoToken	= definition.parameters["vcoToken"]
-	
+
 		try:
 			# Do checks here.  For example, try to connect to whatever you need the credentials for using the credentials provided.
 			# If everything passes, create a credential with the provided input.
@@ -97,7 +97,7 @@ class MyScript(Script):
 			pass
 
 		except Exception as e:
-			raise Exception("Something did not go right: %s" % str(e))
+			raise Exception("Something did not go right in input validation: %s" % str(e))
 
 	def encrypt_vcoToken(self, username, vcoToken, session_key):
 		args = {'token':session_key}
@@ -192,8 +192,8 @@ class MyScript(Script):
 			# Format the api call to velocloud vco to obtain event data. 
 			eventStart = lastTime
 			eventEnd = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')
-			data = {"interval": {"end": eventEnd, "start": eventStart}}
-			ew.log('INFO', "Request to VCO is: " + str(data) + " for: " + inputNameS)
+			data = {"interval": {"start": eventStart, "end": eventEnd}}
+			ew.log('INFO', "Request to VCO is: " + str(data) + " for input name: " + inputNameS)
 
 			veloEventUrl = rest_url+"/portal/rest/event/getEnterpriseEvents"
 
@@ -202,7 +202,7 @@ class MyScript(Script):
 			headers = {'Authorization': 'Token ' + clearVcoToken }
 
 			# djs 03/21 If successful, we received a response from VCO.
-			respE = requests.post(veloEventUrl, data=json.dumps(data), headers=headers, verify=False)
+			respE = requests.post(veloEventUrl, data=json.dumps(data), headers=headers)
 
 			# djs 03/21 Clear token out of memory
 			headers = ''

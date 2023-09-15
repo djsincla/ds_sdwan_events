@@ -1,5 +1,5 @@
-<nav search_view="search">
+<?xml version="1.0" encoding="UTF-8"?>
+<nav>
   <view name="sdwan_vco_events" default="true" />
   <view name="dashboards" />
-
 </nav>
